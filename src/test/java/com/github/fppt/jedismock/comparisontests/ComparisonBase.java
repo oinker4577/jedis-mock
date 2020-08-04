@@ -1,7 +1,7 @@
-package com.github.fppt.jedismock.comparisontests;
+package com.github.fang.jedismock.comparisontests;
 
-import com.github.fppt.jedismock.RedisServer;
-import com.github.fppt.jedismock.util.EmbeddedRedis;
+import com.github.fang.jedismock.RedisServer;
+import com.github.fang.jedismock.util.EmbeddedRedis;
 import org.junit.jupiter.api.extension.*;
 import redis.clients.jedis.Jedis;
 

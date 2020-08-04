@@ -1,7 +1,7 @@
-package com.github.fppt.jedismock.server;
+package com.github.fang.jedismock.server;
 
-import com.github.fppt.jedismock.exception.EOFException;
-import com.github.fppt.jedismock.exception.ParseErrorException;
+import com.github.fang.jedismock.exception.EOFException;
+import com.github.fang.jedismock.exception.ParseErrorException;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;

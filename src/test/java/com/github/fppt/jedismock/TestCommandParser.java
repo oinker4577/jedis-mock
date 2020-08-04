@@ -1,10 +1,10 @@
-package com.github.fppt.jedismock;
+package com.github.fang.jedismock;
 
-import com.github.fppt.jedismock.commands.RedisCommand;
-import com.github.fppt.jedismock.commands.RedisCommandParser;
-import com.github.fppt.jedismock.exception.EOFException;
-import com.github.fppt.jedismock.exception.ParseErrorException;
-import com.github.fppt.jedismock.server.SliceParser;
+import com.github.fang.jedismock.commands.RedisCommand;
+import com.github.fang.jedismock.commands.RedisCommandParser;
+import com.github.fang.jedismock.exception.EOFException;
+import com.github.fang.jedismock.exception.ParseErrorException;
+import com.github.fang.jedismock.server.SliceParser;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;

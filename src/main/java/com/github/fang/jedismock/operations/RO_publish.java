@@ -1,9 +1,9 @@
-package com.github.fppt.jedismock.operations;
+package com.github.fang.jedismock.operations;
 
-import com.github.fppt.jedismock.server.RedisClient;
-import com.github.fppt.jedismock.server.Response;
-import com.github.fppt.jedismock.server.Slice;
-import com.github.fppt.jedismock.storage.RedisBase;
+import com.github.fang.jedismock.server.RedisClient;
+import com.github.fang.jedismock.server.Response;
+import com.github.fang.jedismock.server.Slice;
+import com.github.fang.jedismock.storage.RedisBase;
 
 import java.util.List;
 import java.util.Set;

@@ -1,12 +1,12 @@
-package com.github.fppt.jedismock.operations;
+package com.github.fang.jedismock.operations;
 
-import com.github.fppt.jedismock.server.Response;
-import com.github.fppt.jedismock.server.Slice;
-import com.github.fppt.jedismock.storage.RedisBase;
+import com.github.fang.jedismock.server.Response;
+import com.github.fang.jedismock.server.Slice;
+import com.github.fang.jedismock.storage.RedisBase;
 
 import java.util.List;
 
-import static com.github.fppt.jedismock.Utils.convertToNonNegativeInteger;
+import static com.github.fang.jedismock.Utils.convertToNonNegativeInteger;
 
 class RO_getbit extends AbstractRedisOperation {
     RO_getbit(RedisBase base, List<Slice> params) {

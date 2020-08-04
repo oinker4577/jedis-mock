@@ -1,7 +1,7 @@
-package com.github.fppt.jedismock.comparisontests;
+package com.github.fang.jedismock.comparisontests;
 
 
-import com.github.fppt.jedismock.util.MockSubscriber;
+import com.github.fang.jedismock.util.MockSubscriber;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;

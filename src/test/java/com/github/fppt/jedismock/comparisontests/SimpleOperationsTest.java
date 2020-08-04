@@ -1,4 +1,4 @@
-package com.github.fppt.jedismock.comparisontests;
+package com.github.fang.jedismock.comparisontests;
 
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;

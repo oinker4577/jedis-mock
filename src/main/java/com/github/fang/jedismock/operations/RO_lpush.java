@@ -1,7 +1,7 @@
-package com.github.fppt.jedismock.operations;
+package com.github.fang.jedismock.operations;
 
-import com.github.fppt.jedismock.storage.RedisBase;
-import com.github.fppt.jedismock.server.Slice;
+import com.github.fang.jedismock.storage.RedisBase;
+import com.github.fang.jedismock.server.Slice;
 import com.google.common.collect.Lists;
 
 import java.util.LinkedList;

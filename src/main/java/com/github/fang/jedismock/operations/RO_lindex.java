@@ -1,14 +1,14 @@
-package com.github.fppt.jedismock.operations;
+package com.github.fang.jedismock.operations;
 
-import com.github.fppt.jedismock.server.Response;
-import com.github.fppt.jedismock.server.Slice;
-import com.github.fppt.jedismock.storage.RedisBase;
+import com.github.fang.jedismock.server.Response;
+import com.github.fang.jedismock.server.Slice;
+import com.github.fang.jedismock.storage.RedisBase;
 import com.google.common.collect.Lists;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.github.fppt.jedismock.Utils.convertToInteger;
+import static com.github.fang.jedismock.Utils.convertToInteger;
 
 class RO_lindex extends AbstractRedisOperation {
     RO_lindex(RedisBase base, List<Slice> params) {

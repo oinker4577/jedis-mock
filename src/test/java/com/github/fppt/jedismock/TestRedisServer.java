@@ -1,6 +1,6 @@
-package com.github.fppt.jedismock;
+package com.github.fang.jedismock;
 
-import com.github.fppt.jedismock.server.ServiceOptions;
+import com.github.fang.jedismock.server.ServiceOptions;
 import org.junit.jupiter.api.Test;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.exceptions.JedisConnectionException;

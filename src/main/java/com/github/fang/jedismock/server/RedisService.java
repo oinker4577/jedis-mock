@@ -1,6 +1,6 @@
-package com.github.fppt.jedismock.server;
+package com.github.fang.jedismock.server;
 
-import com.github.fppt.jedismock.storage.RedisBase;
+import com.github.fang.jedismock.storage.RedisBase;
 import com.google.common.base.Preconditions;
 
 import java.io.IOException;

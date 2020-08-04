@@ -1,6 +1,6 @@
-package com.github.fppt.jedismock.storage;
+package com.github.fang.jedismock.storage;
 
-import com.github.fppt.jedismock.server.Slice;
+import com.github.fang.jedismock.server.Slice;
 import com.google.auto.value.AutoValue;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.HashBasedTable;

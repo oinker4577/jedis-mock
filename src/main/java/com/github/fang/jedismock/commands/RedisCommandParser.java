@@ -1,7 +1,7 @@
-package com.github.fppt.jedismock.commands;
+package com.github.fang.jedismock.commands;
 
-import com.github.fppt.jedismock.server.SliceParser;
-import com.github.fppt.jedismock.exception.ParseErrorException;
+import com.github.fang.jedismock.server.SliceParser;
+import com.github.fang.jedismock.exception.ParseErrorException;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 

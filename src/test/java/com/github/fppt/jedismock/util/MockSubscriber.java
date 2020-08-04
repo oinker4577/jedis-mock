@@ -1,4 +1,4 @@
-package com.github.fppt.jedismock.util;
+package com.github.fang.jedismock.util;
 
 import redis.clients.jedis.JedisPubSub;
 

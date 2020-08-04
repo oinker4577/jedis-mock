@@ -1,12 +1,12 @@
-package com.github.fppt.jedismock.operations;
+package com.github.fang.jedismock.operations;
 
-import com.github.fppt.jedismock.server.Response;
-import com.github.fppt.jedismock.server.Slice;
-import com.github.fppt.jedismock.storage.RedisBase;
+import com.github.fang.jedismock.server.Response;
+import com.github.fang.jedismock.server.Slice;
+import com.github.fang.jedismock.storage.RedisBase;
 
 import java.util.List;
 
-import static com.github.fppt.jedismock.Utils.convertToDouble;
+import static com.github.fang.jedismock.Utils.convertToDouble;
 
 abstract class RO_incrOrDecrByFloat extends AbstractRedisOperation {
     RO_incrOrDecrByFloat(RedisBase base, List<Slice> params) {

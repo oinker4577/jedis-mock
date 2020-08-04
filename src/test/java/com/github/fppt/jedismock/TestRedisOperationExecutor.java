@@ -1,12 +1,12 @@
-package com.github.fppt.jedismock;
+package com.github.fang.jedismock;
 
-import com.github.fppt.jedismock.commands.RedisCommandParser;
-import com.github.fppt.jedismock.exception.ParseErrorException;
-import com.github.fppt.jedismock.server.RedisOperationExecutor;
-import com.github.fppt.jedismock.server.Response;
-import com.github.fppt.jedismock.server.Slice;
-import com.github.fppt.jedismock.storage.OperationExecutorState;
-import com.github.fppt.jedismock.storage.RedisBase;
+import com.github.fang.jedismock.commands.RedisCommandParser;
+import com.github.fang.jedismock.exception.ParseErrorException;
+import com.github.fang.jedismock.server.RedisOperationExecutor;
+import com.github.fang.jedismock.server.Response;
+import com.github.fang.jedismock.server.Slice;
+import com.github.fang.jedismock.storage.OperationExecutorState;
+import com.github.fang.jedismock.storage.RedisBase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

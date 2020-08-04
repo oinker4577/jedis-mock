@@ -16,7 +16,7 @@
  * along with Grakn. If not, see <http://www.gnu.org/licenses/gpl.txt>.
  */
 
-package com.github.fppt.jedismock.util;
+package com.github.fang.jedismock.util;
 
 import org.slf4j.LoggerFactory;
 import redis.embedded.RedisServer;
@@ -32,7 +32,7 @@ import redis.embedded.exceptions.EmbeddedRedisException;
  *     This should be used for testing purposes only
  * </p>
  *
- * @author fppt
+ * @author fang
  *
  */
 public class EmbeddedRedis {

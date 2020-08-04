@@ -1,14 +1,14 @@
-package com.github.fppt.jedismock.operations;
+package com.github.fang.jedismock.operations;
 
-import com.github.fppt.jedismock.server.Response;
-import com.github.fppt.jedismock.storage.RedisBase;
-import com.github.fppt.jedismock.server.Slice;
+import com.github.fang.jedismock.server.Response;
+import com.github.fang.jedismock.storage.RedisBase;
+import com.github.fang.jedismock.server.Slice;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import static com.github.fppt.jedismock.Utils.serializeObject;
+import static com.github.fang.jedismock.Utils.serializeObject;
 
 class RO_sadd extends AbstractRedisOperation {
     RO_sadd(RedisBase base, List<Slice> params) {

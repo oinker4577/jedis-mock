@@ -1,16 +1,16 @@
-package com.github.fppt.jedismock.operations;
+package com.github.fang.jedismock.operations;
 
-import com.github.fppt.jedismock.server.Response;
-import com.github.fppt.jedismock.server.Slice;
-import com.github.fppt.jedismock.storage.RedisBase;
+import com.github.fang.jedismock.server.Response;
+import com.github.fang.jedismock.server.Slice;
+import com.github.fang.jedismock.storage.RedisBase;
 
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.github.fppt.jedismock.Utils.convertToInteger;
-import static com.github.fppt.jedismock.Utils.deserializeObject;
-import static com.github.fppt.jedismock.Utils.serializeObject;
+import static com.github.fang.jedismock.Utils.convertToInteger;
+import static com.github.fang.jedismock.Utils.deserializeObject;
+import static com.github.fang.jedismock.Utils.serializeObject;
 
 class RO_lrem extends AbstractRedisOperation {
     RO_lrem(RedisBase base, List<Slice> params) {

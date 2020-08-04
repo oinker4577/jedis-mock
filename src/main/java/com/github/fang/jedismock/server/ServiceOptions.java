@@ -1,4 +1,4 @@
-package com.github.fppt.jedismock.server;
+package com.github.fang.jedismock.server;
 
 import com.google.auto.value.AutoValue;
 

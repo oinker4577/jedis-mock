@@ -1,7 +1,7 @@
-package com.github.fppt.jedismock.storage;
+package com.github.fang.jedismock.storage;
 
-import com.github.fppt.jedismock.server.Slice;
-import com.github.fppt.jedismock.server.RedisClient;
+import com.github.fang.jedismock.server.Slice;
+import com.github.fang.jedismock.server.RedisClient;
 
 import java.util.ArrayList;
 import java.util.Collections;

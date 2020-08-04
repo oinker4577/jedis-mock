@@ -1,14 +1,14 @@
-package com.github.fppt.jedismock.operations;
+package com.github.fang.jedismock.operations;
 
-import com.github.fppt.jedismock.server.Slice;
-import com.github.fppt.jedismock.server.SliceParser;
-import com.github.fppt.jedismock.storage.RedisBase;
+import com.github.fang.jedismock.server.Slice;
+import com.github.fang.jedismock.server.SliceParser;
+import com.github.fang.jedismock.storage.RedisBase;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static com.github.fppt.jedismock.server.Response.NULL;
+import static com.github.fang.jedismock.server.Response.NULL;
 
 class RO_rpoplpush extends AbstractRedisOperation {
     RO_rpoplpush(RedisBase base, List<Slice> params) {

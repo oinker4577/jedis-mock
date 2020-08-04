@@ -1,10 +1,10 @@
-package com.github.fppt.jedismock.server;
+package com.github.fang.jedismock.server;
 
-import com.github.fppt.jedismock.commands.RedisCommand;
-import com.github.fppt.jedismock.exception.WrongValueTypeException;
-import com.github.fppt.jedismock.operations.OperationFactory;
-import com.github.fppt.jedismock.operations.RedisOperation;
-import com.github.fppt.jedismock.storage.OperationExecutorState;
+import com.github.fang.jedismock.commands.RedisCommand;
+import com.github.fang.jedismock.exception.WrongValueTypeException;
+import com.github.fang.jedismock.operations.OperationFactory;
+import com.github.fang.jedismock.operations.RedisOperation;
+import com.github.fang.jedismock.storage.OperationExecutorState;
 import com.google.common.base.Preconditions;
 import org.slf4j.LoggerFactory;
 

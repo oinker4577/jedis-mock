@@ -1,7 +1,7 @@
-package com.github.fppt.jedismock.operations;
+package com.github.fang.jedismock.operations;
 
-import com.github.fppt.jedismock.server.Response;
-import com.github.fppt.jedismock.server.Slice;
+import com.github.fang.jedismock.server.Response;
+import com.github.fang.jedismock.server.Slice;
 
 class RO_info implements RedisOperation {
     @Override
