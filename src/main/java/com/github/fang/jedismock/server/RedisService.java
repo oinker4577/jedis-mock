@@ -7,12 +7,17 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Map;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
 
 /**
  * Created by Xiaolu on 2015/4/21.
  */
 public class RedisService implements Runnable {
 
+    private static final int NUM_THREADS = 50;
+    private static final ExecutorService executorService
+            = Executors.newFixedThreadPool(NUM_THREADS);
     private final ServerSocket server;
     private final Map<Integer, RedisBase> redisBases;
     private final ServiceOptions options;
@@ -31,8 +36,10 @@ public class RedisService implements Runnable {
         while (!server.isClosed()) {
             try {
                 Socket socket = server.accept();
-                Thread t = new Thread(new RedisClient(redisBases, socket, options));
-                t.start();
+                // Thread t = new Thread(new RedisClient(redisBases, socket, options));
+                // t.start();
+                Runnable task = new RedisClient(redisBases, socket, options);
+                executorService.execute(task);
             } catch (IOException e) {
                 // Do noting
             }
