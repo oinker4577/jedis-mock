@@ -7,6 +7,7 @@ import com.github.fang.jedismock.commands.RedisCommandParser;
 import com.github.fang.jedismock.Utils;
 import com.github.fang.jedismock.exception.ParseErrorException;
 import com.google.common.base.Preconditions;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
@@ -23,7 +24,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * Created by Xiaolu on 2015/4/18.
  */
 public class RedisClient implements Runnable {
-    private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(RedisClient.class);
+    private static final Logger LOG = LoggerFactory.getLogger(RedisClient.class);
     private final AtomicBoolean running;
     private final RedisOperationExecutor executor;
     private final Socket socket;
@@ -35,6 +36,7 @@ public class RedisClient implements Runnable {
         Preconditions.checkNotNull(redisBases);
         Preconditions.checkNotNull(socket);
         Preconditions.checkNotNull(options);
+        LOG.info("Client");
 
         OperationExecutorState state = new OperationExecutorState(this, redisBases);
         this.executor = new RedisOperationExecutor(state);
@@ -51,6 +53,7 @@ public class RedisClient implements Runnable {
             Optional<RedisCommand> command = nextCommand();
 
             if(command.isPresent()){
+                LOG.info("command: {}", command.get());
                 Slice response = executor.execCommand(command.get());
                 sendResponse(response, command.toString());
 
@@ -61,7 +64,7 @@ public class RedisClient implements Runnable {
             }
         }
 
-        LOG.debug("Mock redis connection shutting down.");
+        LOG.info("Mock redis connection shutting down.");
     }
 
     /**

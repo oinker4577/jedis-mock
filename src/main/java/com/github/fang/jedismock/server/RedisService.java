@@ -15,7 +15,7 @@ import java.util.concurrent.ExecutorService;
  */
 public class RedisService implements Runnable {
 
-    private static final int NUM_THREADS = 50;
+    private static final int NUM_THREADS = 100;
     private static final ExecutorService executorService
             = Executors.newFixedThreadPool(NUM_THREADS);
     private final ServerSocket server;
