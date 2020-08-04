@@ -47,6 +47,7 @@ public class RedisClient implements Runnable {
 
     public void run() {
         int count = 0;
+        LOG.info("Running");
         while (running.get()) {
             Optional<RedisCommand> command = nextCommand();
 
