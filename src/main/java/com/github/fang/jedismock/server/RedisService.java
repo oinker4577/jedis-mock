@@ -36,10 +36,10 @@ public class RedisService implements Runnable {
         while (!server.isClosed()) {
             try {
                 Socket socket = server.accept();
-                // Thread t = new Thread(new RedisClient(redisBases, socket, options));
-                // t.start();
-                Runnable task = new RedisClient(redisBases, socket, options);
-                executorService.execute(task);
+                Thread t = new Thread(new RedisClient(redisBases, socket, options));
+                t.start();
+//                Runnable task = new RedisClient(redisBases, socket, options);
+//                executorService.execute(task);
             } catch (IOException e) {
                 // Do noting
             }
