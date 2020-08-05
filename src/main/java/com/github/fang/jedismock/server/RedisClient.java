@@ -36,7 +36,6 @@ public class RedisClient implements Runnable {
         Preconditions.checkNotNull(redisBases);
         Preconditions.checkNotNull(socket);
         Preconditions.checkNotNull(options);
-        LOG.info("Client");
 
         OperationExecutorState state = new OperationExecutorState(this, redisBases);
         this.executor = new RedisOperationExecutor(state);
@@ -61,9 +60,13 @@ public class RedisClient implements Runnable {
                 if (options.autoCloseOn() != 0 && options.autoCloseOn() == count) {
                     break;
                 }
+            } else {
+                running.set(false);
+//                this.close();
             }
         }
 
+        close();
         LOG.info("Mock redis connection shutting down.");
     }
 

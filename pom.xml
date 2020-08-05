@@ -8,20 +8,34 @@
         <version>7</version>
     </parent>
 
-    <groupId>com.github.fang</groupId>
+    <groupId>com.github.oinker4577</groupId>
     <artifactId>jedis-mock</artifactId>
-    <version>0.1.17-SNAPSHOT</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
     <name>jedis-mock</name>
     <description>In memory Redis mock for testing</description>
-    <url>https://github.com/fang/jedis-mock</url>
+    <url>https://github.com/oinker4577/jedis-mock</url>
     <prerequisites>
         <maven>3.0.0</maven>
     </prerequisites>
 
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
     <developers>
         <developer>
             <id>fang</id>
+            <name>Kuan-Ying Fang</name>
+            <email>kuanyingfang@gmail.com</email>
+        </developer>
+
+        <!-- Original developer where this is forked from. Thank you!-->
+        <developer>
+            <id>fppt</id>
             <name>Filipe Peliz Pinto Teixeira</name>
             <email>fppintoteixeira@gmail.com</email>
         </developer>
@@ -33,6 +47,12 @@
             <email>zxl0714@gmail.com</email>
         </developer>
     </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/oinker4577/jedis-mock.git</connection>
+        <developerConnection>scm:git:ssh://github.com:oinker4577/jedis-mock.git</developerConnection>
+        <url>http://github.com/oinker4577/jedis-mock/tree/master</url>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -157,6 +177,7 @@
                 <configuration>
                     <useFile>true</useFile>
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
+<!--                    <reportFormat>plain</reportFormat>-->
                 </configuration>
             </plugin>
             <plugin>

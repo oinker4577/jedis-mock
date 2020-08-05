@@ -2,6 +2,8 @@ package com.github.fang.jedismock.server;
 
 import com.github.fang.jedismock.storage.RedisBase;
 import com.google.common.base.Preconditions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -14,8 +16,9 @@ import java.util.concurrent.ExecutorService;
  * Created by Xiaolu on 2015/4/21.
  */
 public class RedisService implements Runnable {
+    private static final Logger LOG = LoggerFactory.getLogger(RedisClient.class);
 
-    private static final int NUM_THREADS = 100;
+    private static final int NUM_THREADS = 10;
     private static final ExecutorService executorService
             = Executors.newFixedThreadPool(NUM_THREADS);
     private final ServerSocket server;
@@ -36,10 +39,11 @@ public class RedisService implements Runnable {
         while (!server.isClosed()) {
             try {
                 Socket socket = server.accept();
-                Thread t = new Thread(new RedisClient(redisBases, socket, options));
-                t.start();
-//                Runnable task = new RedisClient(redisBases, socket, options);
-//                executorService.execute(task);
+                socket.setSoTimeout(500);
+//                Thread t = new Thread(new RedisClient(redisBases, socket, options));
+//                t.start();
+                Runnable task = new RedisClient(redisBases, socket, options);
+                executorService.execute(task);
             } catch (IOException e) {
                 // Do noting
             }
