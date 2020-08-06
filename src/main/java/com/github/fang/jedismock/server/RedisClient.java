@@ -52,7 +52,7 @@ public class RedisClient implements Runnable {
             Optional<RedisCommand> command = nextCommand();
 
             if(command.isPresent()){
-                LOG.info("command: {}", command.get());
+                LOG.debug("command: {}", command.get());
                 Slice response = executor.execCommand(command.get());
                 sendResponse(response, command.toString());
 
@@ -62,12 +62,11 @@ public class RedisClient implements Runnable {
                 }
             } else {
                 running.set(false);
-//                this.close();
             }
         }
 
         close();
-        LOG.info("Mock redis connection shutting down.");
+        LOG.debug("Mock redis connection shutting down.");
     }
 
     /**
