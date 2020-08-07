@@ -16,8 +16,6 @@ import java.util.concurrent.ExecutorService;
 public class RedisService implements Runnable {
 
     private static final int NUM_THREADS = 10;
-    private static final ExecutorService executorService
-            = Executors.newFixedThreadPool(NUM_THREADS);
     private final ServerSocket server;
     private final Map<Integer, RedisBase> redisBases;
     private final ServiceOptions options;
@@ -33,6 +31,8 @@ public class RedisService implements Runnable {
     }
 
     public void run() {
+        ExecutorService executorService
+                = Executors.newFixedThreadPool(NUM_THREADS);
         while (!server.isClosed()) {
             try {
                 Socket socket = server.accept();
@@ -43,5 +43,6 @@ public class RedisService implements Runnable {
                 // Do noting
             }
         }
+        executorService.shutdown();
     }
 }
