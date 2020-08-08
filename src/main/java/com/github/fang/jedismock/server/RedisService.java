@@ -38,7 +38,7 @@ public class RedisService implements Runnable {
                 Socket socket = server.accept();
                 socket.setSoTimeout(500);
                 Runnable task = new RedisClient(redisBases, socket, options);
-                executorService.execute(task);
+                executorService.submit(task);
             } catch (IOException e) {
                 // Do noting
             }
