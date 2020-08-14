@@ -19,6 +19,7 @@ class RO_rename extends AbstractRedisOperation {
         if (ttl == null) {
             return false;
         }
+        base().deleteValue(newKey);
         for (Map.Entry<Slice, Slice> entry : value.entrySet()) {
             base().putValue(newKey, entry.getKey(), entry.getValue(), ttl);
         }
